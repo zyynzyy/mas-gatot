@@ -77,10 +77,12 @@ pipeline {
                     rm -rf build
                     mkdir -p build
 
-                    for f in index.html templates.html tooplate-event-invitation tooplate-event-scripts.js; do
+                    # File utama template baru
+                    for f in index.html tooplate-event-invitation.css tooplate-event-scripts.js; do
                         if [ -f "$f" ]; then cp "$f" build/; fi
                     done
 
+                    # Folder pendukung jika ada
                     for d in assets images img css js fonts vendor; do
                         if [ -d "$d" ]; then cp -r "$d" build/; fi
                     done
