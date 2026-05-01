@@ -77,7 +77,7 @@ pipeline {
                     rm -rf build
                     mkdir -p build
 
-                    for f in index.html templates.html templatemo-quantix-style.css templatemo-quantix-script.js; do
+                    for f in index.html templates.html tooplate-event-invitation tooplate-event-scripts.js; do
                         if [ -f "$f" ]; then cp "$f" build/; fi
                     done
 
